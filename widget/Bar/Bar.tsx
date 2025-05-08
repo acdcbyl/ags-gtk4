@@ -83,6 +83,7 @@ function Bar({ gdkmonitor, ...props }: BarProps) {
   return (
     <window
       visible
+      layer={Astal.Layer.BOTTOM}
       setup={(self) => {
         // problem when change bar size via margin/padding live
         // https://github.com/wmww/gtk4-layer-shell/issues/60

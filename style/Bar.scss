@@ -129,6 +129,44 @@
   }
 }
 
+.system-bg {
+
+  background-color: $primary_container;
+  color: $on_primary_container;
+  min-height: 20px;
+  // min-width: 20px;
+  border-radius: 10px;
+  padding: 0 10px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+
+  &.notifications {
+    color: $on_surface;
+
+    .circle {
+      border-radius: 99px;
+    }
+  }
+
+  &:hover {
+
+    background-color: $primary;
+    color: $on_primary;
+    // background-color: if($bar-opacity < 1,
+    //     $bar-button-bg-color,
+    //     color.adjust($bar-button-fg-color, $alpha: -0.9));
+  }
+
+  &.active {
+    background-color: $primary;
+    color: $on_primary;
+  }
+}
+
 .panel-button {
   // background-color: $inverse_surface_transparent;
   color: $on_surface;

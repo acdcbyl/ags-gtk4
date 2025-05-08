@@ -43,6 +43,7 @@ export default function QSPanelButton() {
   return (
     <PanelButton
       window={WINDOW_NAME}
+      cssClasses={["system-bg"]}
       onClicked={() => {
         App.toggle_window(WINDOW_NAME);
       }}

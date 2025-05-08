@@ -162,7 +162,7 @@ function SearchEntry() {
   };
 
   return (
-    <overlay cssClasses={["entry-overlay"]} heightRequest={70}>
+    <overlay cssClasses={["entry-overlay"]} heightRequest={60}>
       <entry
         type="overlay"
         vexpand
@@ -217,7 +217,7 @@ export default function Applauncher(_gdkmonitor: Gdk.Monitor) {
   setupAppsFolderMonitor();
 
   return (
-    <PopupWindow name={WINDOW_NAME} anchor={Astal.WindowAnchor.TOP | Astal.WindowAnchor.LEFT}>
+    <PopupWindow name={WINDOW_NAME} anchor={Astal.WindowAnchor.TOP | Astal.WindowAnchor.LEFT} layer={Astal.Layer.TOP}>
       <box
         cssClasses={["applauncher-container"]}
         vertical
