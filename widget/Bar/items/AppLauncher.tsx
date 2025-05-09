@@ -9,7 +9,11 @@ export default function LauncherPanelButton() {
 			window={WINDOW_NAME}
 			onClicked={() => App.toggle_window(WINDOW_NAME)}
 		>
-			<image iconName="os-linux-arch-symbolic" />
+			<box>
+				<image iconName={"file-search-symbolic"} />
+				<label label={"Applications"} />
+			</box>
+
 		</PanelButton>
 	);
 }

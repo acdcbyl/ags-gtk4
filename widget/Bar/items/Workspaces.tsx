@@ -41,8 +41,8 @@ function WorkspaceButton({ ws, ...props }: WsButtonProps) {
 export default function WorkspacesPanelButton() {
 	return (
 		<PanelButton cssClasses={["workspace-button-bg"]}>
-			<box cssClasses={["workspace-container"]} spacing={8}>
-				{range(9).map((i) => (
+			<box cssClasses={["workspace-container"]} spacing={5}>
+				{range(6).map((i) => (
 					<WorkspaceButton ws={AstalHyprland.Workspace.dummy(i + 1, null)} />
 				))}
 			</box>

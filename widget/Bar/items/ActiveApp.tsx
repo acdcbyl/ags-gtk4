@@ -97,7 +97,7 @@ export default () => {
                   label={clientTitleBinding.as(String)}
                   // truncate={true}
                   ellipsize={Pango.EllipsizeMode.END}
-                  maxWidthChars={24}
+                  maxWidthChars={15}
                 />
               </>
             );

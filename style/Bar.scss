@@ -6,7 +6,7 @@
 .bar-container {
   background: $surface_transparent;
   color: $on_surface;
-  min-height: 45px;
+  min-height: 35px;
   // margin: $bar-margin;
   // border-radius: $bar-border-radius;
   padding: 0px;
@@ -14,16 +14,10 @@
   font-weight: 500;
   padding-left: 8px;
   padding-right: 8px;
-  // min-height: 40px;
-  // border-radius: 20px;
-  // box-shadow:
-  //   0 0 0 $bar-border-width $bar-border-color,
-  //   $bar-shadow-offset $bar-shadow-blur $bar-shadow-spread
-  //     color.adjust($bar-shadow-color, $alpha: calc($bar-shadow-opacity - 1));
 
   separator {
     // min-width: if($bar-separator, 2px, 0);
-    min-width: 10px;
+    min-width: 5px;
     // margin: 2px;
     // color: $on_surface;
     // background: $on_surface;
@@ -38,17 +32,17 @@
       min-height: 8px;
       transition: all 0.3s;
       background-color: $inverse_surface_transparent_variant;
-      border-radius: 100px;
+      border-radius: 30px;
 
       &.active {
-        min-width: 2.5rem;
-        min-height: 0.55rem;
+        min-width: 2.2rem;
+        min-height: 1.0rem;
         background-color: $primary;
       }
 
       &.occupied {
         box-shadow: unset;
-        background-color: color.scale($primary, $alpha: -40%);
+        background-color: color.scale($primary, $alpha: -20%);
 
         &.active {
           background-color: $primary;
@@ -81,25 +75,25 @@
 // }
 
 .workspace-button-bg {
-  background-color: $inverse_surface_transparent;
+  // background-color: $inverse_surface_transparent;
   color: $on_surface;
   min-height: 20px;
   border-radius: 10px;
-  padding: 0 10px;
+  padding: 0 5px;
   margin-top: 7px;
   margin-bottom: 7px;
 }
 
 .applauncher-bg {
 
-  background-color: $primary;
-  color: $on_primary;
+  color: $on_surface;
   min-height: 20px;
-  min-width: 25px;
-  border-radius: 100px;
-  padding: 5px;
+  // min-width: 20px;
+  border-radius: 10px;
+  padding: 0 5px;
   margin-top: 5px;
   margin-bottom: 5px;
+
   transition:
     background-color 0.2s ease-in-out,
     color 0.2s ease-in-out;
@@ -116,55 +110,27 @@
 
     background:
       $inverse_surface_transparent, $inverse_surface_transparent_overlay;
-    background-color: $primary_container;
-    color: $on_primary_container;
     // background-color: if($bar-opacity < 1,
     //     $bar-button-bg-color,
     //     color.adjust($bar-button-fg-color, $alpha: -0.9));
   }
 
   &.active {
-    background-color: $primary_container;
-    color: $on_primary_container;
+    background-color: $primary;
+    color: $on_primary;
   }
 }
 
-.system-bg {
+.netspeed-bg {
 
-  background-color: $primary_container;
-  color: $on_primary_container;
+  // background-color: $primary;
+  color: $on_surface;
   min-height: 20px;
   // min-width: 20px;
   border-radius: 10px;
-  padding: 0 10px;
-  margin-top: 7px;
-  margin-bottom: 7px;
-
-  transition:
-    background-color 0.2s ease-in-out,
-    color 0.2s ease-in-out;
-
-  &.notifications {
-    color: $on_surface;
-
-    .circle {
-      border-radius: 99px;
-    }
-  }
-
-  &:hover {
-
-    background-color: $primary;
-    color: $on_primary;
-    // background-color: if($bar-opacity < 1,
-    //     $bar-button-bg-color,
-    //     color.adjust($bar-button-fg-color, $alpha: -0.9));
-  }
-
-  &.active {
-    background-color: $primary;
-    color: $on_primary;
-  }
+  padding: 0 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .panel-button {
@@ -173,9 +139,9 @@
   min-height: 20px;
   // min-width: 20px;
   border-radius: 10px;
-  padding: 0 10px;
-  margin-top: 7px;
-  margin-bottom: 7px;
+  padding: 0 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 
   transition:
     background-color 0.2s ease-in-out,
@@ -211,8 +177,8 @@
   min-height: 20px;
   border-radius: 10px;
   padding: 0 5px;
-  margin-top: 7px;
-  margin-bottom: 7px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 menubutton {

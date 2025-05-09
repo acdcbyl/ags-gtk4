@@ -3,7 +3,7 @@ import PanelButton from "../PanelButton";
 
 export default function NetworkSpeedPanelButton() {
   return (
-    <PanelButton window="">
+    <PanelButton window="" cssClasses={["netspeed-bg"]}>
       <box cssClasses={["network-speed"]}>
         <label
           cssClasses={["label"]}
