@@ -129,18 +129,18 @@ function Header() {
           />
         </box>
       </button>
-      <button
-        cssClasses={["powermenu"]}
-        onClicked={() => {
-          App.toggle_window(WINDOW_NAME);
-          App.toggle_window(POWERMENU_WINDOW);
-        }}
-      >
-        <image
-          iconName={"system-shutdown-symbolic"}
-          iconSize={Gtk.IconSize.NORMAL}
-        />
-      </button>
+      {/* <button */}
+      {/*   cssClasses={["powermenu"]} */}
+      {/*   onClicked={() => { */}
+      {/*     App.toggle_window(WINDOW_NAME); */}
+      {/*     App.toggle_window(POWERMENU_WINDOW); */}
+      {/*   }} */}
+      {/* > */}
+      {/*   <image */}
+      {/*     iconName={"system-shutdown-symbolic"} */}
+      {/*     iconSize={Gtk.IconSize.NORMAL} */}
+      {/*   /> */}
+      {/* </button> */}
     </box>
   );
 }

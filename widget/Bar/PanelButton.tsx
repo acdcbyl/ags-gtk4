@@ -19,7 +19,7 @@ export default function PanelButton({
         if (window) {
           let open = false;
 
-          self.add_css_class(window);
+          // self.add_css_class(window);
 
           hook(self, App, "window-toggled", (_, win) => {
             const winName = win.name;

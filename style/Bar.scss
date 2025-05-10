@@ -6,7 +6,7 @@
 .bar-container {
   background: $surface_transparent;
   color: $on_surface;
-  min-height: 35px;
+  min-height: 40px;
   // margin: $bar-margin;
   // border-radius: $bar-border-radius;
   padding: 0px;
@@ -120,7 +120,35 @@
     color: $on_primary;
   }
 }
+.powermenus-bg {
+  color: $on_surface;
+  min-height: 20px; /* 更改为与其他按钮相同的高度 */
+  /* min-width: 20px; */
+  border-radius: 10px;
+  padding: 0 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+
+  &.notifications {
+    color: $on_surface;
+
+    .circle {
+      border-radius: 99px;
+    }
+  }
+
+  &:hover {
+    color: $red;
+  }
+
+  &.active {
+    color: $red;
+  }
+}
 .netspeed-bg {
 
   // background-color: $primary;

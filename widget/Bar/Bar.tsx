@@ -15,6 +15,7 @@ import { idle } from "astal";
 import { windowAnimation } from "../../lib/hyprland";
 import { WindowProps } from "astal/gtk4/widget";
 import TrayPanelButton from "./items/Tray";
+import PowermenuButton from "./items/Powermenu";
 
 const { bar } = options;
 const { start, center, end } = bar;
@@ -30,6 +31,7 @@ const panelButton = {
   tray: () => <TrayPanelButton />,
   quicksetting: () => <QSPanelButton />,
   battery: () => <Battery />,
+  powermenu: () => <PowermenuButton />
 };
 
 function Start() {
