@@ -9,6 +9,7 @@ import ScreenCorners from "./widget/ScreenCorners/ScreenCorners";
 import PowerMenu from "./widget/Powermenu/PowerMenu.jsx";
 import VerificationWindow from "./widget/Powermenu/VerificationWindow.jsx";
 import QSWindow from "./widget/Quicksettings/QSWindow.jsx";
+import { startOSDListeners } from "./widget/Osd/Listeners";
 
 export default [
   Bar,
@@ -20,4 +21,5 @@ export default [
   PowerMenu,
   VerificationWindow,
   ScreenCorners,
+  startOSDListeners,
 ];
