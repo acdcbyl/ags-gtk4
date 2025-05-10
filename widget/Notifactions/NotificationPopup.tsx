@@ -20,6 +20,7 @@ export default function NotificationPopup(gdkmonitor: Gdk.Monitor) {
     <window
       namespace={"notifications-popup"}
       margin={25}
+      width_request={300}
       // layer={Astal.Layer.BOTTOM}
       setup={(self) => {
         sendBatch([`layerrule animation slide top, ${self.namespace}`]);

@@ -79,7 +79,7 @@ export default () => {
 
             // 提取 client 的绑定
             const clientClassBinding = bind(client, "class");
-            const clientTitleBinding = bind(client, "title");
+            const clientTitleBinding = bind(client, "class");
 
             return (
               <>

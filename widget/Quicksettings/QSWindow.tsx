@@ -10,6 +10,7 @@ import MediaPlayers from "./MediaPlayer";
 import VolumeBox from "./VolumeBox";
 import { FlowBox } from "../../common/FlowBox";
 import { Astal, Gtk, App, Gdk } from "astal/gtk4";
+import { bash } from "../../lib/utils";
 import { WINDOW_NAME as POWERMENU_WINDOW } from "../Powermenu/PowerMenu";
 import { bind, Binding, GObject, Variable } from "astal";
 // import options from "../../options";
@@ -129,18 +130,18 @@ function Header() {
           />
         </box>
       </button>
-      {/* <button */}
-      {/*   cssClasses={["powermenu"]} */}
-      {/*   onClicked={() => { */}
-      {/*     App.toggle_window(WINDOW_NAME); */}
-      {/*     App.toggle_window(POWERMENU_WINDOW); */}
-      {/*   }} */}
-      {/* > */}
-      {/*   <image */}
-      {/*     iconName={"system-shutdown-symbolic"} */}
-      {/*     iconSize={Gtk.IconSize.NORMAL} */}
-      {/*   /> */}
-      {/* </button> */}
+      <button
+        cssClasses={["settings"]}
+        onClicked={() => {
+          bash(`better-control`)
+          App.toggle_window(WINDOW_NAME)
+        }}
+      >
+        <image
+          iconName={"system-settings-symbolic"}
+          iconSize={Gtk.IconSize.NORMAL}
+        />
+      </button>
     </box>
   );
 }

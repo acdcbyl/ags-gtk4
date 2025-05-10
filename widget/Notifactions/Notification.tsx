@@ -52,7 +52,7 @@ export default function Notification({
           {/* )} */}
           <image
             cssClasses={["app-icon"]}
-            iconName="notifications-applet-symbolic"
+            iconName={"fa-bell-symbolic"}
           />
           <label
             cssClasses={["app-name"]}
