@@ -2,7 +2,7 @@
 @use "colors.scss" as *;
 @use "sass:color";
 .osd-window {
-    background-color: $surface_transparent;
+    background-color: transparent;
   // min-width: 400px;
   // min-height: 40px;
   border-radius:10px;
@@ -39,7 +39,7 @@
 
             &.empty {
               border-radius: 10px;
-              background-color: $inverse_surface_transparent_variant;
+              background-color: $surface_transparent;
             }
 
             &.filled {
