@@ -14,16 +14,12 @@ const options = mkOptions(
         { cached: true },
       ),
     },
-    dock: {
-      position: opt("bottom"),
-      pinned: opt(["firefox", "Alacritty", "org.gnome.Nautilus", "localsend"]),
-    },
     bar: {
       position: opt("top"),
       separator: opt(true),
       start: opt(["launcher", "workspace", "activeapp"]),
       center: opt(["time"]),
-      end: opt(["network_speed", "notification", "tray", "quicksetting", "powermenu"]),
+      end: opt(["recordbutton", "network_speed", "notification", "tray", "quicksetting", "powermenu"]),
     },
     desktop_clock: {
       position: opt<

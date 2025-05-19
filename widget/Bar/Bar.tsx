@@ -31,7 +31,8 @@ const panelButton = {
   tray: () => <TrayPanelButton />,
   quicksetting: () => <QSPanelButton />,
   battery: () => <Battery />,
-  powermenu: () => <PowermenuButton />
+  powermenu: () => <PowermenuButton />,
+  recordbutton: () => <RecordIndicatorPanelButton />,
 };
 
 function Start() {
@@ -42,7 +43,6 @@ function Start() {
           s.map((s) => panelButton[s]()),
           Gtk.Orientation.VERTICAL,
         ),
-        <RecordIndicatorPanelButton />,
       ])}
     </box>
   );
