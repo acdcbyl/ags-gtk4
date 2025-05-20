@@ -1,4 +1,5 @@
 import { App } from "astal/gtk4";
+import AstalNotifd from "gi://AstalNotifd";
 import PanelButton from "../PanelButton";
 import { WINDOW_NAME } from "../../Quicksettings/QSWindow";
 import AstalBattery from "gi://AstalBattery";
@@ -44,6 +45,7 @@ export default function QSPanelButton() {
   const wp = AstalWp.get_default();
   const speaker = wp?.audio.defaultSpeaker!;
   const powerprofile = AstalPowerProfiles.get_default();
+  const notifd = AstalNotifd.get_default();
 
   return (
     <PanelButton
@@ -57,6 +59,10 @@ export default function QSPanelButton() {
         <image
           visible={bind(bluetooth, "isPowered")}
           iconName={"bluetooth-symbolic"}
+        />
+        <image
+          visible={bind(notifd, "dont_disturb")}
+          iconName={"notification-disabled-symbolic"}
         />
         <image
           visible={bind(battery, "isPresent")}

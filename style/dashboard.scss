@@ -1,9 +1,23 @@
 @use "sass:string";
 @use "sass:color";
 @use "colors.scss" as *;
-
+.dash-main {
+  background-color: $surface_transparent;
+  padding: 20px;
+  border-radius: 0 10px 10px 0;
+  border-left: 1px solid $inverse_surface_transparent;
+}
+.time-label {
+  color: $on_surface;
+  font-size: 6rem;
+  font-weight: 500;
+}
+.uptime-label {
+  color: $on_surface;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
 .datemenu-container {
-  border-radius: 10px;
   min-width: 300px;
 
   .time {
@@ -17,14 +31,14 @@
 
   calendar {
     // margin: 10px;
-    background-color: $surface_transparent;
+    background-color: $inverse_surface_transparent;
     // color: $on_surface;
-    min-width: 300px;
-    min-height: 300px;
+    min-width: 280px;
+    min-height: 280px;
     // min-height: 380px;
     padding: 20px;
-    // padding-top: 20px;
     border-radius: 10px;
+    // padding-top: 20px;
     border: unset;
 
     header {
@@ -33,7 +47,7 @@
       border: unset;
     }
 
-    grid>* {
+    grid > * {
       min-width: 20px;
       min-height: 20px;
       border-radius: 10px;
@@ -64,7 +78,7 @@
       margin: 0.1rem;
       min-width: 30px;
       min-height: 30px;
-      color: $primary
+      color: $primary;
       // margin-top: 0.2rem;
       // margin-bottom: 0.2rem;
       // margin-left: 0.2rem;

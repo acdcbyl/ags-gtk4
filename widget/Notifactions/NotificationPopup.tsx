@@ -13,7 +13,7 @@ export const sendBatch = (batch: string[]) => {
   hyprland.message(`[[BATCH]]/${cmd}`);
 };
 export default function NotificationPopup(gdkmonitor: Gdk.Monitor) {
-  const { TOP } = Astal.WindowAnchor;
+  const { TOP, RIGHT } = Astal.WindowAnchor;
   const notifd = AstalNotifd.get_default();
 
   return (
@@ -75,7 +75,7 @@ export default function NotificationPopup(gdkmonitor: Gdk.Monitor) {
       }}
       gdkmonitor={gdkmonitor}
       application={App}
-      anchor={TOP}
+      anchor={TOP | RIGHT}
     ></window>
   );
 }

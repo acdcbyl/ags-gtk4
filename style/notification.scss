@@ -6,9 +6,9 @@
 $window-border-radius: 6px 6px 6px 6px;
 
 .notifications-container {
-  border-radius: 10px;
-  min-width: 420px;
-  min-height: 550px;
+  border-radius: 10px 0 0 10px;
+  min-width: 400px;
+  min-height: 500px;
   // padding: 10px 10px 0;
   color: $on_surface;
   padding: 12px;
@@ -16,8 +16,8 @@ $window-border-radius: 6px 6px 6px 6px;
 
   separator {
     margin: 2px;
-    background-color: $inverse_surface_transparent;
-    color: $inverse_surface_transparent;
+    // background-color: $inverse_surface_transparent;
+    // color: $inverse_surface_transparent;
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
   }
@@ -78,7 +78,7 @@ $window-border-radius: 6px 6px 6px 6px;
     }
   }
 
-  scrolledwindow viewport>box {
+  scrolledwindow viewport > box {
     .not-found label {
       font-size: 1rem;
       color: $on_surface;
@@ -184,7 +184,6 @@ $window-border-radius: 6px 6px 6px 6px;
   }
 
   .actions {
-
     // margin-top: 0.5rem;
     button {
       background: none;

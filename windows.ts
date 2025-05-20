@@ -14,7 +14,7 @@ import { startOSDListeners } from "./widget/Osd/Listeners";
 export default [
   Bar,
   Applauncher,
-  NotificationWindow,
+  // NotificationWindow,
   NotificationPopup,
   Dashboard,
   QSWindow,

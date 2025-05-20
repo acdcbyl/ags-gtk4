@@ -8,6 +8,9 @@ import AstalNotifd from "gi://AstalNotifd?version=0.1";
 export const time = Variable(GLib.DateTime.new_now_local()).poll(1000, () =>
   GLib.DateTime.new_now_local(),
 );
+export const uptime = Variable(Math.floor(GLib.get_monotonic_time() / 1000000)).poll(1000, () =>
+  Math.floor(GLib.get_monotonic_time() / 1000000));
+
 export function range(max: number) {
   return Array.from({ length: max + 1 }, (_, i) => i);
 }
