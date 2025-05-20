@@ -17,24 +17,25 @@ function NetworkIcon() {
     return <image iconName={bind(network.wired, "iconName")} />;
   if (!network.wifi && !network.wired)
     return <image iconName="network-offline" />;
-  const icon = Variable.derive(
-    [
-      bind(network, "primary"),
-      bind(network.wifi, "iconName"),
-      bind(network.wired, "iconName"),
-    ],
-    (primary, wifiIcon, wiredIcon) => {
-      if (
-        primary == AstalNetwork.Primary.WIRED ||
-        primary == AstalNetwork.Primary.UNKNOWN
-      ) {
-        return wiredIcon;
-      } else {
-        return wifiIcon;
-      }
-    },
-  );
-  return <image iconName={icon()} onDestroy={() => icon.drop()} />;
+  //有些设备无法获取到wired的icon，尚不清楚原因
+  // const icon = Variable.derive(
+  //   [
+  //     bind(network, "primary"),
+  //     bind(network.wifi, "iconName"),
+  //     bind(network.wired, "iconName"),
+  //   ],
+  //   (primary, wifiIcon, wiredIcon) => {
+  //     if (
+  //       primary == AstalNetwork.Primary.WIRED ||
+  //       primary == AstalNetwork.Primary.UNKNOWN
+  //     ) {
+  //       return wiredIcon;
+  //     } else {
+  //       return wifiIcon;
+  //     }
+  //   },
+  // );
+  return <image iconName={bind(network.wifi, "iconName")} />;
 }
 
 export default function QSPanelButton() {
