@@ -1,4 +1,5 @@
 import { timeout, Variable } from "astal";
+import Adw from "gi://Adw?version=1";
 import { bind } from "astal";
 import { App, Gtk } from "astal/gtk4";
 import AstalApps from "gi://AstalApps";
@@ -138,11 +139,50 @@ function MediaPlayer({ player }) {
 
 export default function MediaPlayers() {
   const mpris = AstalMpris.get_default();
+  const carousel = new Adw.Carousel({ spacing: 8 });
+  const playerWidgets = new Map();
+
+  const players = mpris.get_players();
+  for (const player of players) {
+    const widget = MediaPlayer({ player });
+    carousel.append(widget);
+    playerWidgets.set(player, widget);
+  }
+
+  mpris.connect("player-added", (_, player) => {
+    console.log("player-added", player.busName);
+    players.push(player);
+    const widget = MediaPlayer({ player });
+    carousel.append(widget);
+    playerWidgets.set(player, widget);
+  });
+
+  mpris.connect("player-closed", (_, player) => {
+    console.log("player-removed", player.busName);
+    const widget = playerWidgets.get(player);
+    if (!widget) {
+      console.error("couldn't find widget for player", player.busName);
+      return;
+    }
+
+    // 移除组件从carousel
+    carousel.remove(widget);
+
+    const idx = players.indexOf(player);
+    if (idx >= 0) {
+      players.splice(idx, 1);
+    } else {
+      console.error("couldn't find player in players array", player.busName);
+    }
+
+    playerWidgets.delete(player);
+  });
+  carousel.add_css_class("mediaPlayersContainer");
+
   return (
-    <box cssClasses={["mediaPlayersContainer"]} hexpand={false}>
-      {bind(mpris, "players").as((players) => (
-        <MediaPlayer player={players[0]} />
-      ))}
+    <box hexpand={false} vertical>
+      {carousel}
+      {new Adw.CarouselIndicatorDots({ carousel })}
     </box>
   );
 }
