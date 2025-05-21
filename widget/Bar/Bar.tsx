@@ -16,6 +16,7 @@ import { windowAnimation } from "../../lib/hyprland";
 import { WindowProps } from "astal/gtk4/widget";
 import TrayPanelButton from "./items/Tray";
 import PowermenuButton from "./items/Powermenu";
+import NotifiCount from "./items/NotifiCount";
 
 const { bar } = options;
 const { start, center, end } = bar;
@@ -33,6 +34,7 @@ const panelButton = {
   battery: () => <Battery />,
   powermenu: () => <PowermenuButton />,
   recordbutton: () => <RecordIndicatorPanelButton />,
+  notifycount: () => <NotifiCount />,
 };
 
 function Start() {

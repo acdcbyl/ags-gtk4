@@ -133,7 +133,7 @@ export default function Notification({
               <label
                 cssClasses={["body"]}
                 ellipsize={Pango.EllipsizeMode.MIDDLE}
-                maxWidthChars={5}
+                maxWidthChars={30}
                 lines={5}
                 useMarkup
                 wrap

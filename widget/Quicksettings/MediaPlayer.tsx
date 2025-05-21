@@ -182,7 +182,7 @@ export default function MediaPlayers() {
   return (
     <box hexpand={false} vertical>
       {carousel}
-      {new Adw.CarouselIndicatorDots({ carousel })}
+      {new Adw.CarouselIndicatorLines({ carousel })}
     </box>
   );
 }

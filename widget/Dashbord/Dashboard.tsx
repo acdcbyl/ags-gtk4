@@ -106,9 +106,9 @@ function Dashboard(_gdkmonitor: Gdk.Monitor) {
 
       // layer={Astal.Layer.BOTTOM}
       //     animation="slide top"
-      //   layout={layout.get()}
-      anchor={Astal.WindowAnchor.TOP}
-      // margin={25}
+      layout={layout.get()}
+      // anchor={Astal.WindowAnchor.TOP}
+      margin={15}
       onDestroy={() => layout.drop()}
     >
       <box>

@@ -2,7 +2,6 @@
 @use "sass:color";
 @use "colors.scss" as *;
 
-
 .bar-container {
   background: $surface_transparent;
   color: $on_surface;
@@ -27,7 +26,6 @@
     padding: 0;
 
     .workspace-button {
-
       min-width: 8px;
       min-height: 8px;
       transition: all 0.3s;
@@ -36,7 +34,7 @@
 
       &.active {
         min-width: 2.2rem;
-        min-height: 1.0rem;
+        min-height: 1rem;
         background-color: $primary;
       }
 
@@ -51,7 +49,6 @@
     }
   }
 }
-
 
 .bar__battery {
   min-height: 30px;
@@ -85,7 +82,6 @@
 }
 
 .applauncher-bg {
-
   color: $on_surface;
   min-height: 20px;
   // min-width: 20px;
@@ -107,7 +103,6 @@
   }
 
   &:hover {
-
     background:
       $inverse_surface_transparent, $inverse_surface_transparent_overlay;
     // background-color: if($bar-opacity < 1,
@@ -150,7 +145,6 @@
   }
 }
 .netspeed-bg {
-
   // background-color: $primary;
   color: $on_surface;
   min-height: 20px;
@@ -184,7 +178,6 @@
   }
 
   &:hover {
-
     background:
       $inverse_surface_transparent, $inverse_surface_transparent_overlay;
     // background-color: if($bar-opacity < 1,
@@ -198,7 +191,6 @@
   }
 }
 
-
 .tray_style {
   background-color: $inverse_surface_transparent;
   color: $on_surface;
@@ -207,6 +199,14 @@
   padding: 0 5px;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+.notificount-bg {
+  // border: 1px solid $on_surface;
+  min-height: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 menubutton {
@@ -228,6 +228,5 @@ menubutton {
       // background:
       //   $inverse_surface_transparent, $inverse_surface_transparent_overlay;
     }
-
   }
 }
