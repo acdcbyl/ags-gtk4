@@ -3,7 +3,7 @@
 
 .powermenu {
   padding: 24px;
-  border-radius: 10px;
+  border-radius: 30px;
   background: $surface_transparent;
 }
 
@@ -35,7 +35,7 @@
 .verification {
   min-width: 300px;
   padding: 24px;
-  border-radius: 10px;
+  border-radius: 30px;
   background: $surface_transparent;
 }
 
@@ -65,7 +65,7 @@
 .verification-container {
   min-width: 300px;
   padding: 24px;
-  border-radius: 10px;
+  border-radius: 30px;
   background: $surface_transparent;
   color: $on_surface;
 
@@ -87,7 +87,7 @@
       color: $on_surface;
       min-width: 70px;
       min-height: 28px;
-      border-radius: 10px;
+      border-radius: 20px;
       padding: 0.2rem;
 
       &:focus {
@@ -112,7 +112,7 @@
 
 .powermenu-container {
   padding: 24px;
-  border-radius: 10px;
+  border-radius: 30px;
   background: $surface_transparent;
   color: $on_surface;
 

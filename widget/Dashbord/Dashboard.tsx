@@ -79,6 +79,7 @@ function DNDButton() {
         return classes;
       })}
       label={"DND"}
+      halign={Gtk.Align.START}
     />
   );
 }
@@ -87,6 +88,7 @@ function ClearButton() {
   return (
     <button
       cssClasses={["clear"]}
+      halign={Gtk.Align.END}
       onClicked={() => {
         notifd.notifications.forEach((n) => n.dismiss());
         App.toggle_window(WINDOW_NAME);
@@ -117,24 +119,21 @@ function Dashboard(_gdkmonitor: Gdk.Monitor) {
           vertical
           vexpand={false}
         >
-          <box cssClasses={["window-header"]}>
-            {/* <label label={"Notifications"} hexpand xalign={0} /> */}
-            <label
-              useMarkup={true}
-              label={"<b> Notifications</b>"}
-              hexpand
-              xalign={0}
-            />
-            {/* <image */}
-            {/*   iconName={"preferences-system-notifications-symbolic"} */}
-            {/*   hexpand */}
-            {/*   halign={Gtk.Align.START} */}
-            {/* /> */}
-            <DNDButton />
-            <ClearButton />
-          </box>
           <Gtk.Separator />
           <NotifsScrolledWindow />
+
+          <box cssClasses={["window-header"]} hexpand>
+            {/* <label label={"Notifications"} hexpand xalign={0} /> */}
+            {/* <label */}
+            {/*   useMarkup={true} */}
+            {/*   label={"<b> Notifications</b>"} */}
+            {/*   hexpand */}
+            {/*   xalign={0} */}
+            {/* /> */}
+            <DNDButton />
+            <box hexpand />
+            <ClearButton />
+          </box>
         </box>
         <box spacing={8} cssClasses={["datemenu-container"]}>
           <box hexpand vertical halign={Gtk.Align.CENTER} cssClasses={["dash-main"]}>

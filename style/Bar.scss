@@ -169,6 +169,12 @@
     background-color 0.2s ease-in-out,
     color 0.2s ease-in-out;
 
+  .clock-notificount {
+    color: $primary;
+    font-size: 11px;
+    margin-bottom: 10px;
+    margin-left: 0.5rem;
+  }
   &.notifications {
     color: $on_surface;
 
@@ -188,6 +194,12 @@
   &.active {
     background-color: $primary;
     color: $on_primary;
+    .clock-notificount {
+      color: $on_primary;
+      font-size: 11px;
+      margin-bottom: 10px;
+      margin-left: 0.5rem;
+    }
   }
 }
 
@@ -208,7 +220,6 @@
   margin-top: 6px;
   margin-bottom: 6px;
 }
-
 menubutton {
   padding: 0 5px;
   min-height: 20px;

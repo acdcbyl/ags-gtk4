@@ -4,13 +4,13 @@
 .dash-main {
   background-color: $surface_transparent;
   padding: 20px;
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 30px 30px 0;
   border-left: 1px solid $inverse_surface_transparent;
 }
 .time-label {
   color: $on_surface;
   font-size: 6rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 .uptime-label {
   color: $on_surface;
@@ -37,7 +37,7 @@
     min-height: 280px;
     // min-height: 380px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     // padding-top: 20px;
     border: unset;
 

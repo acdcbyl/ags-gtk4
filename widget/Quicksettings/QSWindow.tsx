@@ -82,26 +82,20 @@ function Header() {
 
   return (
     <box hexpand={false} cssClasses={["header"]} spacing={6}>
-      <label
-        useMarkup={true}
-        label={"<b> ControlCenter</b>"}
-        hexpand
-        xalign={0}
-      />
+      {/* <label */}
+      {/*   useMarkup={true} */}
+      {/*   label={"<b> ControlCenter</b>"} */}
+      {/*   hexpand */}
+      {/*   xalign={0} */}
+      {/* /> */}
       {/* <image */}
       {/*   iconName={"org.gnome.Settings-symbolic"} */}
       {/*   hexpand */}
       {/*   halign={Gtk.Align.START} */}
       {/* /> */}
       <button
-        onClicked={() => {
-          App.toggle_window(WINDOW_NAME);
-          toggleWallpaperPicker();
-        }}
-        iconName={"preferences-desktop-wallpaper-symbolic"}
-      />
-      <button
         cssClasses={["battery"]}
+        heightRequest={30}
         onClicked={() => {
           qsPage.set("battery");
         }}
@@ -119,6 +113,14 @@ function Header() {
           />
         </box>
       </button>
+      <box hexpand />
+      <button
+        onClicked={() => {
+          App.toggle_window(WINDOW_NAME);
+          toggleWallpaperPicker();
+        }}
+        iconName={"preferences-desktop-wallpaper-symbolic"}
+      />
       <button
         cssClasses={["settings"]}
         onClicked={() => {
@@ -160,7 +162,7 @@ function ArrowButton<T extends GObject.Object>({
       })}
     >
       <button onClicked={onClicked}>
-        <box halign={Gtk.Align.START} cssClasses={["first-button"]} spacing={6}>
+        <box halign={Gtk.Align.START} cssClasses={["first-button"]}>
           <image iconName={icon} iconSize={Gtk.IconSize.LARGE} />
           <box vertical hexpand>
             <label xalign={0} label={title} cssClasses={["title"]} />

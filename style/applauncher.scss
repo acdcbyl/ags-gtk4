@@ -7,10 +7,11 @@
   min-height: 550px;
   min-width: 420px;
   background: $surface_transparent;
-  border-radius: 10px;
+  padding: 5px;
+  border-radius: 30px;
 
   .background-entry {
-    border-radius: 10px;
+    border-radius: 20px;
     // background: $primary;
     // box-shadow: inset 0 0 0 1px $primary;
   }
@@ -26,7 +27,7 @@
   //   // margin-top: 0.2rem;
   // }
 
-  >overlay {
+  > overlay {
     // margin: 10px;
     margin-top: 6px;
 
@@ -79,7 +80,7 @@
     // }
   }
 
-  >scrolledwindow viewport {
+  > scrolledwindow viewport {
     padding: 10px;
     padding-top: 2px;
 
@@ -97,7 +98,7 @@
     min-height: 50px;
     padding: 0.2rem 0.4rem;
     color: $on_surface;
-    border-radius: 10px;
+    border-radius: 20px;
 
     // background-color: $inverse_surface_transparent;
     image {
@@ -106,7 +107,7 @@
     }
 
     &:active {
-      >* {
+      > * {
         transform: none;
       }
 

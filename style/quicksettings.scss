@@ -2,10 +2,11 @@
 @use "colors.scss" as *;
 
 .qs-container {
-  min-width: 420px;
+  min-width: 400px;
   // min-height: 650px;
   background: $surface_transparent;
-  border-radius: 10px;
+  border-radius: 30px;
+  padding: 5px;
 
   button {
     outline-color: $on_surface;
@@ -13,18 +14,18 @@
   }
 
   .arrow-button {
-    border-radius: 10px;
+    border-radius: 30px;
     min-height: 70px;
     // min-width: 38px;
     // min-height: 38px;
     background-color: $inverse_surface_transparent;
     color: $on_surface;
 
-    >* {
+    > * {
       padding: 0 4px;
 
       .title {
-        margin-top: 0.3rem;
+        // margin-top: 0.3rem;
         margin-left: 0.5rem;
       }
 
@@ -40,7 +41,6 @@
     &.active {
       background-color: $primary;
       color: $on_primary;
-
     }
 
     // .next-page {
@@ -78,7 +78,8 @@
 
     button {
       padding: 0.3rem 0.5rem;
-      border-radius: 10px;
+      border-radius: 20px;
+      min-height: 20px;
       color: $on_surface;
       background-color: $inverse_surface_transparent;
 
@@ -105,14 +106,15 @@
     image {
       padding: 0.5rem;
       border-radius: 10px;
-      background-color: $inverse_surface_transparent;
+      // background-color: $inverse_surface_transparent;
     }
-
-    // margin-bottom: 0.7rem;
+    .volume-box {
+      margin-bottom: 1rem;
+    }
   }
 
   .qs-button {
-    border-radius: 10px;
+    border-radius: 30px;
     min-height: 70px;
     background-color: $inverse_surface_transparent;
     color: $on_surface;
@@ -156,7 +158,7 @@
       background-color: $inverse_surface_transparent_variant;
     }
 
-    >* {
+    > * {
       padding: 0.5rem;
     }
 
@@ -177,7 +179,7 @@
     .button {
       padding: 0.4rem 0.8rem;
       background-color: $inverse_surface_transparent;
-      border-radius: 10px;
+      border-radius: 20px;
       // border-radius: 30px;
       min-height: 40px;
       color: $on_surface;
@@ -191,7 +193,7 @@
       }
 
       &:active {
-        >* {
+        > * {
           transform: none;
         }
 
@@ -231,5 +233,4 @@
       padding-top: 0;
     }
   }
-
 }
