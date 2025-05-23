@@ -18,7 +18,7 @@ const options = mkOptions(
       position: opt("top"),
       separator: opt(true),
       start: opt(["launcher", "workspace", "activeapp"]),
-      center: opt(["time"]),
+      center: opt(["battery", "time"]),
       end: opt(["recordbutton", "network_speed", "tray", "quicksetting", "powermenu"]),
     },
     desktop_clock: {

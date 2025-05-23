@@ -64,10 +64,17 @@ export default function QSPanelButton() {
           visible={bind(notifd, "dont_disturb")}
           iconName={"notification-disabled-symbolic"}
         />
-        <image
-          visible={bind(battery, "isPresent")}
-          iconName={bind(battery, "batteryIconName")}
-        />
+        <box>
+          <image
+            visible={bind(battery, "isPresent")}
+            iconName={bind(battery, "batteryIconName")}
+          />
+          <label
+            label={bind(battery, "percentage").as(
+              (p) => `${Math.floor(p * 100)} %`,
+            )}
+          />
+        </box>
         <image iconName={bind(speaker, "volumeIcon")} />
         <image
           visible={bind(powerprofile, "activeProfile").as(

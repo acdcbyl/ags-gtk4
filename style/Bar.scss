@@ -5,7 +5,7 @@
 .bar-container {
   background: $surface_transparent;
   color: $on_surface;
-  min-height: 40px;
+  min-height: 35px;
   // margin: $bar-margin;
   // border-radius: $bar-border-radius;
   padding: 0px;
@@ -55,8 +55,8 @@
   padding-left: 10px;
   padding-right: 10px;
   border-radius: 10px;
-  background: $primary_container;
-  color: $on_primary_container;
+  // background: $primary_container;
+  // color: $on_primary_container;
 }
 
 // .bar_item {
@@ -75,7 +75,7 @@
   // background-color: $inverse_surface_transparent;
   color: $on_surface;
   min-height: 20px;
-  border-radius: 10px;
+  border-radius: 30px;
   padding: 0 5px;
   margin-top: 7px;
   margin-bottom: 7px;
@@ -85,8 +85,8 @@
   color: $on_surface;
   min-height: 20px;
   // min-width: 20px;
-  border-radius: 10px;
-  padding: 0 5px;
+  border-radius: 20px;
+  padding: 0 7px;
   margin-top: 5px;
   margin-bottom: 5px;
 
@@ -119,7 +119,7 @@
   color: $on_surface;
   min-height: 20px; /* 更改为与其他按钮相同的高度 */
   /* min-width: 20px; */
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 0 5px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -160,8 +160,8 @@
   color: $on_surface;
   min-height: 20px;
   // min-width: 20px;
-  border-radius: 10px;
-  padding: 0 5px;
+  border-radius: 20px;
+  padding: 0 7px;
   margin-top: 5px;
   margin-bottom: 5px;
 
@@ -207,8 +207,8 @@
   background-color: $inverse_surface_transparent;
   color: $on_surface;
   min-height: 20px;
-  border-radius: 10px;
-  padding: 0 5px;
+  border-radius: 20px;
+  padding: 0 7px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
