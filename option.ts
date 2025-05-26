@@ -14,25 +14,15 @@ const options = mkOptions(
         { cached: true },
       ),
     },
+    screencorners: {
+      radius: 20,
+    },
     bar: {
       position: opt("top"),
       separator: opt(true),
       start: opt(["launcher", "workspace", "activeapp"]),
-      center: opt(["battery", "time"]),
+      center: opt(["time"]),
       end: opt(["recordbutton", "network_speed", "tray", "quicksetting", "powermenu"]),
-    },
-    desktop_clock: {
-      position: opt<
-        | "top_left"
-        | "top"
-        | "top_right"
-        | "left"
-        | "center"
-        | "right"
-        | "bottom_left"
-        | "bottom"
-        | "bottom_right"
-      >("top_left"),
     },
     theme: {
       mode: opt(
