@@ -33,23 +33,29 @@
       .progress {
         border-radius: 10px;
         margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
 
         trough {
-          border-radius: 10px;
+          border-radius: 9999px;
+          min-height: 0.25em;
           // min-height: 10px;
 
           block {
             // min-width: 10px; // Ensure minimum width matches the border-radius
+            min-height: 0.25em;
 
             &.empty {
-              border-radius: 10px;
+              border-radius: 9999px;
+              min-height: 0.25em;
               background-color: $inverse_surface_transparent_variant;
             }
 
             &.filled {
               background-color: $primary;
-              border-radius: 10px;
-              min-height: 10px;
+              border-radius: 9999px;
+              min-height: 0.25em;
               // margin: 0.1rem;
               // padding: 0.5rem;
             }

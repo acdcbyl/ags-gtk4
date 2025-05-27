@@ -27,7 +27,7 @@ scale {
   trough {
     min-height: $width;
     min-width: $width;
-    background-color: $surface;
+    background-color: $inverse_surface_transparent;
 
     highlight,
     progress {
