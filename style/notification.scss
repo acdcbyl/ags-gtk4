@@ -38,9 +38,12 @@ $window-border-radius: 6px 6px 6px 6px;
       min-width: 10px;
       min-height: 30px;
       color: $on_surface;
-      background: $inverse_surface_transparent;
+      // background: $inverse_surface_transparent;
       &:hover {
-        background: $surface_bright;
+        color: $primary;
+        label {
+          color: $primary;
+        }
       }
       label {
         font-size: 1.1rem;
