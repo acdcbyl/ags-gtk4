@@ -26,15 +26,15 @@ const panelButton = {
   workspace: () => <WorkspacesPanelButton />,
   activeapp: () => <ActiveApp />,
   time: () => <TimePanelButton />,
-  notification: () => <NotifPanelButton />,
+  // notification: () => <NotifPanelButton />,
   network_speed: () => <NetworkSpeedPanelButton />,
-  keylayout: () => <KeyboardLayout />,
+  // keylayout: () => <KeyboardLayout />,
   tray: () => <TrayPanelButton />,
   quicksetting: () => <QSPanelButton />,
   battery: () => <Battery />,
   powermenu: () => <PowermenuButton />,
   recordbutton: () => <RecordIndicatorPanelButton />,
-  notifycount: () => <NotifiCount />,
+  // notifycount: () => <NotifiCount />,
 };
 
 function Start() {
