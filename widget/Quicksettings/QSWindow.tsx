@@ -299,11 +299,10 @@ function QSWindow(_gdkmonitor: Gdk.Monitor) {
     <PopupWindow
       name={WINDOW_NAME}
       // layer={Astal.Layer.BOTTOM}
-      layout={layout.get()}
       //animation="slide right"
-      //anchor={Astal.WindowAnchor.TOP | Astal.WindowAnchor.RIGHT}
+      anchor={Astal.WindowAnchor.TOP | Astal.WindowAnchor.RIGHT}
       margin={10}
-      onDestroy={() => layout.drop()}
+    //onDestroy={() => layout.drop()}
     >
       <box
         cssClasses={["qs-container"]}
