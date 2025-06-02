@@ -9,7 +9,7 @@ type Props = WindowProps & {
   name?: string;
 };
 
-export default function Window({
+export default function PopupWindow({
   children,
   visible = false,
   keymode = Astal.Keymode.EXCLUSIVE,
