@@ -87,7 +87,7 @@ function Header() {
   const screenRecord = ScreenRecord.get_default();
   return (
 
-    <box hexpand={false} cssClasses={["header"]} spacing={6}>
+    <box hexpand cssClasses={["header"]} spacing={6}>
       <button
         cssClasses={["battery"]}
         // heightRequest={30}
@@ -198,11 +198,12 @@ function ArrowButton<T extends GObject.Object>({
       })}
     >
       <button onClicked={onClicked}>
-        <box halign={Gtk.Align.START} cssClasses={["first-button"]}>
+        <box halign={Gtk.Align.START} hexpand>
           <image iconName={icon} iconSize={Gtk.IconSize.LARGE} />
-          <box vertical hexpand>
-            <label xalign={0} label={title} cssClasses={["title"]} />
-            <label xalign={0} label={subtitle} cssClasses={["subtitle"]} />
+          <box vertical>
+            <label xalign={0} label={title} cssClasses={["title"]}
+              maxWidthChars={8} />
+            <label xalign={0} label={subtitle} cssClasses={["subtitle"]} maxWidthChars={8} />
           </box>
         </box>
       </button>
