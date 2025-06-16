@@ -48,7 +48,7 @@ export default function Notification({
       <box
         name={n.id.toString()}
         cssClasses={["notification-container", urgency(n)]}
-        widthRequest={350}
+        // widthRequest={350}
         hexpand={false}
         vexpand={false}
       >
