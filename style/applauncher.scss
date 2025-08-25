@@ -9,7 +9,7 @@
   background: $surface_transparent;
   padding: 5px;
   border-radius: 30px;
-  box-shadow: 8px 8px 2px 1px $surface_bright;
+  box-shadow: 8px 8px 2px 1px $outline;
 
   .background-entry {
     border-radius: 20px;
@@ -84,7 +84,7 @@
     margin-bottom: 10px;
     margin-right: 10px;
     margin-left: 10px;
-    box-shadow: -8px 8px 2px 1px $surface_bright;
+    box-shadow: -8px 8px 2px 1px $outline;
 
     background-color: $inverse_surface_transparent;
     image {

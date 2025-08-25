@@ -6,7 +6,7 @@
   padding: 20px;
   border-radius: 0 30px 30px 0;
   border-left: 1px solid $inverse_surface_transparent;
-  box-shadow: 8px 8px 2px 1px $surface_bright;
+  box-shadow: 8px 8px 2px 1px $outline;
 }
 .time-label {
   color: $on_surface;
@@ -39,7 +39,7 @@
   calendar {
     // margin: 10px;
     background-color: $inverse_surface_transparent;
-    box-shadow: -8px 8px 2px 1px $surface_bright;
+    box-shadow: -8px 8px 2px 1px $outline;
     // color: $on_surface;
     min-width: 280px;
     min-height: 280px;
@@ -93,7 +93,7 @@
   background-color: $inverse_surface_transparent;
   border-radius: 20px;
   padding: 10px;
-  box-shadow: -8px 8px 2px 1px $surface_bright;
+  box-shadow: -8px 8px 2px 1px $outline;
   // min-width: 380px;
   // margin-left: 10px;
   // margin-right: 10px;
@@ -114,7 +114,33 @@
     font-weight: bold;
     color: $on_surface;
   }
+  .temperature-feel {
+    color: $on_surface;
+  }
+  .temperature-pre {
+    color: $on_surface;
+  }
+  .unavailable {
+    color: $on_surface;
+  }
+  .windspeed {
+    color: $on_surface;
+  }
 
+  .wind-icon {
+    color: $on_surface;
+  }
+  .weather-icon {
+    &.day {
+      // background-color: $primary;
+      color: $primary;
+    }
+
+    &.night {
+      // background-color: $secondary;
+      color: $secondary;
+    }
+  }
   .main-icon {
     &.day {
       background-color: $primary;
@@ -136,7 +162,7 @@
   padding: 15px;
   border-radius: 20px;
   margin-top: 5px;
-  box-shadow: -8px 8px 2px 1px $surface_bright;
+  box-shadow: -8px 8px 2px 1px $outline;
   image {
     color: $on_surface;
     padding: 4px;

@@ -111,6 +111,7 @@ export function WeatherPanel() {
               <label
                 label={`feels like <b>${Math.round(data.current.apparent_temperature)}${nbsp}${data.current.units.apparent_temperature
                   }</b>`}
+                cssClasses={["temperature-feel"]}
                 useMarkup={true}
                 halign={Gtk.Align.START}
               />
@@ -126,22 +127,25 @@ export function WeatherPanel() {
                   cssClasses={["timestamp"]}
                 />
                 <box spacing={4}>
-                  {createIcon(data.in_6h.weather_code, data.in_6h.is_day, {})}
+                  {createIcon(data.in_6h.weather_code, data.in_6h.is_day, {
+                    cssClasses: ["weather-icon"],
+                  })}
                   <label
+                    cssClasses={["temperature-pre"]}
                     label={`${Math.round(data.in_6h.temperature)}${nbsp}${data.in_6h.units.temperature
                       } (${Math.round(data.in_6h.apparent_temperature)}${nbsp}${data.in_6h.units.apparent_temperature
                       })`}
                   />
                 </box>
                 <box spacing={4}>
-                  <image iconName="weather-windy-symbolic" />
-                  <label label={`${data.in_6h.wind_speed}${nbsp}${data.in_6h.units.wind_speed}`} />
+                  <image cssClasses={["wind-icon"]} iconName="weather-windy-symbolic" />
+                  <label cssClasses={["windspeed"]} label={`${data.in_6h.wind_speed}${nbsp}${data.in_6h.units.wind_speed}`} />
                 </box>
               </box>
             </box>
           </>
         ) : (
-          <label label="Weather unavailable" halign={Gtk.Align.CENTER} />
+          <label cssClasses={["unavailable"]} label="Weather unavailable" halign={Gtk.Align.CENTER} />
         )
       )}
     </box>

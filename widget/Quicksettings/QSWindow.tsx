@@ -283,10 +283,12 @@ function WifiBluetooth() {
 function MainPage() {
   return (
     <box cssClasses={["qs-page"]} name={"main"} vertical spacing={12}>
-      <Header />
-      <Gtk.Separator />
-      <VolumeBox />
-      <BrightnessBox />
+      <box spacing={6} vertical>
+        <Header />
+        <Gtk.Separator />
+        <VolumeBox />
+        <BrightnessBox />
+      </box>
       {/* <Gtk.Separator /> */}
       <WifiBluetooth />
       <QSButtons />

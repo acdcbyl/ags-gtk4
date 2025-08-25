@@ -16,7 +16,7 @@ $window-border-radius: 6px 6px 6px 6px;
   color: $on_surface;
   padding: 12px;
   background-color: $surface_transparent;
-  box-shadow: 8px 8px 2px 1px $surface_bright;
+  box-shadow: 8px 8px 2px 1px $outline;
 
   separator {
     margin: 2px;
@@ -82,7 +82,7 @@ $window-border-radius: 6px 6px 6px 6px;
     // padding: 10px;
     background: $inverse_surface_transparent;
     box-shadow: none;
-    box-shadow: -8px 8px 2px 1px $surface_bright;
+    box-shadow: -8px 8px 2px 1px $outline;
   }
 }
 
@@ -93,7 +93,7 @@ $window-border-radius: 6px 6px 6px 6px;
   margin: 10px;
   // margin-bottom: 10px;
   background: $surface_transparent;
-  box-shadow: -8px 8px 2px 1px $surface_bright;
+  box-shadow: -8px 8px 2px 1px $outline;
 
   &.critical {
     box-shadow: 0 0 0 0.1rem $red;

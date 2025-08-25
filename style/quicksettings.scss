@@ -7,7 +7,7 @@
   background: $surface_transparent;
   border-radius: 30px;
   padding: 5px;
-  box-shadow: -8px 8px 2px 1px $surface_bright;
+  box-shadow: -8px 8px 2px 1px $outline;
 
   button {
     outline-color: $on_surface;
@@ -26,7 +26,7 @@
     border-bottom-right-radius: 9999px;
     border-top-left-radius: 9999px;
     border-bottom-left-radius: 9999px;
-    box-shadow: 8px 8px 2px 1px $surface_bright;
+    box-shadow: 8px 8px 2px 1px $outline;
 
     > * {
       padding: 0 4px;
@@ -132,7 +132,7 @@
     color: $on_surface;
     outline-color: $on_surface;
     padding: 0 5px;
-    box-shadow: 8px 8px 2px 1px $surface_bright;
+    box-shadow: 8px 8px 2px 1px $outline;
 
     button {
       // padding: 1rem 0;
@@ -177,7 +177,7 @@
       padding: 0.4rem 0.8rem;
       background-color: $inverse_surface_transparent;
       border-radius: 20px;
-      box-shadow: 8px 8px 2px 1px $surface_bright;
+      box-shadow: 8px 8px 2px 1px $outline;
       // border-radius: 30px;
       min-height: 30px;
       margin-top: 5px;
