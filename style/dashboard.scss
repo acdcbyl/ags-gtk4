@@ -6,6 +6,7 @@
   padding: 20px;
   border-radius: 0 30px 30px 0;
   border-left: 1px solid $inverse_surface_transparent;
+  box-shadow: 8px 8px 2px 1px $surface_bright;
 }
 .time-label {
   color: $on_surface;

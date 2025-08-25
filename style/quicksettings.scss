@@ -7,10 +7,12 @@
   background: $surface_transparent;
   border-radius: 30px;
   padding: 5px;
+  box-shadow: -8px 8px 2px 1px $surface_bright;
 
   button {
     outline-color: $on_surface;
     // color: $on_surface;
+    padding: 0.625em;
   }
 
   .arrow-button {
