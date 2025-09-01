@@ -189,7 +189,7 @@ export default function MediaPlayers() {
   carousel.add_css_class("mediaPlayersContainer");
 
   return (
-    <box hexpand={false} vertical>
+    <box hexpand={false} vertical spacing={10}>
       {carousel}
       {new Adw.CarouselIndicatorLines({ carousel })}
     </box>
